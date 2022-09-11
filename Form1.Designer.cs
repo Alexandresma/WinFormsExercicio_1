@@ -104,6 +104,8 @@
             this.textBox_Quantidade.Name = "textBox_Quantidade";
             this.textBox_Quantidade.Size = new System.Drawing.Size(125, 27);
             this.textBox_Quantidade.TabIndex = 5;
+            this.textBox_Quantidade.TextChanged += new System.EventHandler(this.textBox_Quantidade_TextChanged);
+            this.textBox_Quantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quantidade_KeyPress);
             // 
             // textBox_PrecoUnitario
             // 
@@ -111,11 +113,15 @@
             this.textBox_PrecoUnitario.Name = "textBox_PrecoUnitario";
             this.textBox_PrecoUnitario.Size = new System.Drawing.Size(125, 27);
             this.textBox_PrecoUnitario.TabIndex = 6;
+            this.textBox_PrecoUnitario.TextChanged += new System.EventHandler(this.textBox_PrecoUnitario_TextChanged);
+            this.textBox_PrecoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_PrecoUnitario_KeyPress);
             // 
             // textBox_SubTotal
             // 
+            this.textBox_SubTotal.Enabled = false;
             this.textBox_SubTotal.Location = new System.Drawing.Point(529, 87);
             this.textBox_SubTotal.Name = "textBox_SubTotal";
+            this.textBox_SubTotal.ReadOnly = true;
             this.textBox_SubTotal.Size = new System.Drawing.Size(125, 27);
             this.textBox_SubTotal.TabIndex = 7;
             // 
@@ -137,6 +143,7 @@
             this.button_CancelarVenda.TabIndex = 9;
             this.button_CancelarVenda.Text = "Cancelar Venda";
             this.button_CancelarVenda.UseVisualStyleBackColor = true;
+            this.button_CancelarVenda.Click += new System.EventHandler(this.button_CancelarVenda_Click);
             // 
             // label5
             // 
@@ -195,6 +202,7 @@
             // 
             this.richTextBox_SubTotal.Location = new System.Drawing.Point(429, 64);
             this.richTextBox_SubTotal.Name = "richTextBox_SubTotal";
+            this.richTextBox_SubTotal.ReadOnly = true;
             this.richTextBox_SubTotal.Size = new System.Drawing.Size(125, 156);
             this.richTextBox_SubTotal.TabIndex = 17;
             this.richTextBox_SubTotal.Text = "";
@@ -203,6 +211,7 @@
             // 
             this.richTextBox_precoUnitario.Location = new System.Drawing.Point(286, 64);
             this.richTextBox_precoUnitario.Name = "richTextBox_precoUnitario";
+            this.richTextBox_precoUnitario.ReadOnly = true;
             this.richTextBox_precoUnitario.Size = new System.Drawing.Size(125, 156);
             this.richTextBox_precoUnitario.TabIndex = 16;
             this.richTextBox_precoUnitario.Text = "";
@@ -211,6 +220,7 @@
             // 
             this.richTextBox_Quantidade.Location = new System.Drawing.Point(155, 64);
             this.richTextBox_Quantidade.Name = "richTextBox_Quantidade";
+            this.richTextBox_Quantidade.ReadOnly = true;
             this.richTextBox_Quantidade.Size = new System.Drawing.Size(125, 156);
             this.richTextBox_Quantidade.TabIndex = 15;
             this.richTextBox_Quantidade.Text = "";
@@ -219,6 +229,7 @@
             // 
             this.richTextBox_Produto.Location = new System.Drawing.Point(24, 64);
             this.richTextBox_Produto.Name = "richTextBox_Produto";
+            this.richTextBox_Produto.ReadOnly = true;
             this.richTextBox_Produto.Size = new System.Drawing.Size(125, 156);
             this.richTextBox_Produto.TabIndex = 14;
             this.richTextBox_Produto.Text = "";
@@ -231,6 +242,7 @@
             this.button_RemoverProduto.TabIndex = 15;
             this.button_RemoverProduto.Text = "Remover um produto da lista de compras";
             this.button_RemoverProduto.UseVisualStyleBackColor = true;
+            this.button_RemoverProduto.Click += new System.EventHandler(this.button_RemoverProduto_Click);
             // 
             // button_FecharVenda
             // 
@@ -240,6 +252,7 @@
             this.button_FecharVenda.TabIndex = 16;
             this.button_FecharVenda.Text = "Fechar Venda";
             this.button_FecharVenda.UseVisualStyleBackColor = true;
+            this.button_FecharVenda.Click += new System.EventHandler(this.button_FecharVenda_Click);
             // 
             // label9
             // 
@@ -254,6 +267,7 @@
             // 
             this.textBox_Total.Location = new System.Drawing.Point(508, 459);
             this.textBox_Total.Name = "textBox_Total";
+            this.textBox_Total.ReadOnly = true;
             this.textBox_Total.Size = new System.Drawing.Size(146, 27);
             this.textBox_Total.TabIndex = 18;
             // 
